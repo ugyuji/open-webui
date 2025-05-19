@@ -1,0 +1,14 @@
+{
+  "snapshot": "snapshot-20250518-e45caf9a-2853-4a89-a23f-d79f2f5d3645",
+  "terminals": [
+    {
+      "name": "backend",
+      "command": "cd backend && poetry run uvicorn open_webui.main:app --reload --host 0.0.0.0 --port 8080"
+    },
+    {
+      "name": "frontend",
+      "command": "cd src && npm run dev"
+    }
+  ],
+  "install": "cd backend && poetry install && cd ../../src && npm install"
+}
